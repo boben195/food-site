@@ -18,24 +18,24 @@ const Navbar = () => {
             className="search-input"
             placeholder="Search for products..."
           />
-          <button>SEARCH</button>
+          <button className="search-btn">SEARCH</button>
         </div>
         <div className="icons">
-          <div>
+          <div className="profile-group">
             <BiUser className="icon" />
             <div className="dropdoun-menu">
               <Link to="/login">
-                <p>Login/Sign Up</p>
+                <p className="dropdoun-item">Login/Sign Up</p>
               </Link>
               <Link to="/order">
-                <p>Orders</p>
+                <p className="dropdoun-item">Orders</p>
               </Link>
-              <p>Logout</p>
+              <p className="dropdoun-item">Logout</p>
             </div>
           </div>
           <button className="card-icon">
             <BiCart className="icon" />
-            <span>0</span>
+            <span className="card-qty">0</span>
           </button>
         </div>
       </nav>

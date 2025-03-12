@@ -16,4 +16,72 @@
 .search-input {
     flex-grow: 3;
     padding: 10px;
+    border: 2px solid #d2042d;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 14px;
+}
+.search-input::placeholder {
+    color: #ccc;
+}
+.search-btn {
+    background-color: #d2042d;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.icons .icon {
+    font-size: 35px;
+    cursor: pointer;
+}
+.card-icon {
+    position: relative;
+    border: none;
+    background: transparent;
+}
+.card-qty {
+    position: absolute;
+    bottom: 20px;
+    right: -5px;
+    background: red;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+}
+.profile-group {
+    position: relative;
+}
+.dropdoun-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background: #fff;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 130px;
+    font-size: 18px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.profile-group:hover .dropdoun-menu {
+    display: block;
+
+}
+.dropdoun-item {
+    color: gray;
+    cursor: pointer;
+    margin: 2px 0;
+}
+.dropdoun-item:hover {
+    color: black;
 }
