@@ -4,6 +4,7 @@ import { FaShippingFast } from "react-icons/fa";
 import { BiSupport } from "react-icons/bi";
 import { MdPayment } from "react-icons/md";
 import { FiSend } from "react-icons/fi";
+import "./Hero.css";
 
 const Hero = () => {
   return (
@@ -21,10 +22,10 @@ const Hero = () => {
             <button>Explore Our Menu</button>
           </div>
           <div className="hero-right">
-            <img src={hero_img} alt="delicious pasta" />
+            <img src={hero_img} alt="delicious pasta" className="hero-img" />
           </div>
         </div>
-        <div className="hero-button">
+        <div className="hero-bottom">
           <div className="hero-content">
             <div className="info-icon">
               <FaShippingFast className="hero-icon" />
