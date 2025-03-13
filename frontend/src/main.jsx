@@ -7,10 +7,10 @@ import FoodContextProvider from "./context/FoodContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <FoodContextProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <FoodContextProvider>
         <App />
-      </BrowserRouter>
-    </FoodContextProvider>
+      </FoodContextProvider>
+    </BrowserRouter>
   </StrictMode>
 );
