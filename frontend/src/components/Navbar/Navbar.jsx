@@ -2,8 +2,11 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { BiUser, BiCart } from "react-icons/bi";
+import { useContext } from "react";
+import { FoodContext } from "../../context/FoodContext";
 
 const Navbar = () => {
+  const { getCartCount } = useContext(FoodContext);
   return (
     <div>
       <nav className="navbar">
@@ -35,7 +38,7 @@ const Navbar = () => {
           </div>
           <button className="card-icon">
             <BiCart className="icon" />
-            <span className="card-qty">0</span>
+            <span className="card-qty">{getCartCount()}</span>
           </button>
         </div>
       </nav>

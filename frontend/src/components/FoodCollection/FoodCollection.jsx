@@ -5,7 +5,7 @@ import { FoodContext } from "../../context/FoodContext";
 import "./FoodCollection.css";
 
 const FoodCollection = () => {
-  const { products } = useContext(FoodContext);
+  const { products, addToCard } = useContext(FoodContext);
 
   const [category, setCategory] = useState("All");
   return (
@@ -49,7 +49,9 @@ const FoodCollection = () => {
                     <h3>{product.name}</h3>
                     <div className="price-add">
                       <p>${product.price}</p>
-                      <button>Add To Cart</button>
+                      <button onClick={() => addToCard(product._id)}>
+                        Add To Cart
+                      </button>
                     </div>
                   </div>
                 ))
