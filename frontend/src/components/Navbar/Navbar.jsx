@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BiUser, BiCart } from "react-icons/bi";
 import { useContext } from "react";
 import { FoodContext } from "../../context/FoodContext";
+import { FaCentos } from "react-icons/fa";
 
 const Navbar = () => {
+  const [loading, setLoading] = useState(false);
+
+  const navigete = useNavigate();
+
+  const handleNavigation = (path) => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    navigete(path);
+  };
+
   const { getCartCount } = useContext(FoodContext);
   return (
     <div>
+      {loading && (
+        <div className="loader-container">
+          <div className="loader">
+            <FaCentos className="loader-icon" />
+          </div>
+        </div>
+      )}
       <nav className="navbar">
         <div>
           <Link to="/">
@@ -36,7 +56,10 @@ const Navbar = () => {
               <p className="dropdoun-item">Logout</p>
             </div>
           </div>
-          <button className="card-icon">
+          <button
+            className="card-icon"
+            onClick={() => handleNavigation("/card")}
+          >
             <BiCart className="icon" />
             <span className="card-qty">{getCartCount()}</span>
           </button>
