@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import { categoryItem, product } from "../../assets/assets";
 import { FoodContext } from "../../context/FoodContext";
 
+import "./FoodCollection.css";
+
 const FoodCollection = () => {
   const { products } = useContext(FoodContext);
 
@@ -15,7 +17,7 @@ const FoodCollection = () => {
         </div>
         <div className="display-container">
           <div className="category-section">
-            <h1>Explore Our Categories</h1>
+            <h2>Explore Our Categories</h2>
             <ul className="caregory-list">
               {categoryItem.map((item, index) => (
                 <li
