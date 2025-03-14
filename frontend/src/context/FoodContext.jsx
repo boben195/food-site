@@ -56,6 +56,7 @@ const FoodContextProvider = ({ children }) => {
     <FoodContext.Provider
       value={{
         products,
+        cartItems,
         navigate,
         currency,
         addToCard,
