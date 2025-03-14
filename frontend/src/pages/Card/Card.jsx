@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { FoodContext } from "../../context/FoodContext";
 import { MdDelete } from "react-icons/md";
 import CartTotal from "../../components/CartTotal/CartTotal";
+import "./Card.css";
 
 const Card = () => {
   const { products, currency, navigate, updateQuantity, cartItems } =
