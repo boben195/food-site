@@ -40,7 +40,7 @@ const Card = () => {
           }
           return (
             <div className="card-item" key={index}>
-              <div>
+              <div className="card-item-info">
                 <img
                   src={productData.image}
                   alt="your wish"
@@ -62,7 +62,7 @@ const Card = () => {
                 onChange={(e) =>
                   e.target.value === "" || e.target.value === "0"
                     ? null
-                    : updateQuantity(item.id, Number(e.target.value))
+                    : updateQuantity(item._id, Number(e.target.value))
                 }
               />
               <MdDelete
@@ -77,7 +77,10 @@ const Card = () => {
         <div className="checkout-box">
           <CartTotal />
           <div className="checkout-btn-container">
-            <button onClick={() => navigate("/checkout")}>
+            <button
+              className="chackout-btn"
+              onClick={() => navigate("/checkout")}
+            >
               PROCEED TO CHECKOUT
             </button>
           </div>
