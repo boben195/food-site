@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import stripe from "../../assets/stripe_logo.png";
 import CartTotal from "../../components/CartTotal/CartTotal";
+import "./Checkouts.css";
 
 const Checkouts = () => {
   const [method, setMethod] = useState("cod");
@@ -17,7 +18,7 @@ const Checkouts = () => {
                   method === "stripe" ? "selected" : ""
                 }`}
               >
-                <img src={stripe} alt="logo" />
+                <img src={stripe} alt="logo" className="payment-logo" />
               </div>
               <div
                 onClick={() => setMethod("cod")}
@@ -68,7 +69,7 @@ const Checkouts = () => {
           <CartTotal />
           <div className="form-submit">
             <button type="submit" className="submit-btn">
-              PLACR ORDER
+              PLACE ORDER
             </button>
           </div>
         </div>
