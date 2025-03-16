@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Login.css";
 
 const Login = () => {
   const [currentState, serCurrentState] = useState("Login");
@@ -29,8 +30,8 @@ const Login = () => {
           placeholder="Password"
           required
         />
-        <div>
-          <p>Forget password ?</p>
+        <div className="form-footer">
+          <p className="fgt-password">Forget password ?</p>
           {currentState === "Login" ? (
             <p
               className="toggle-auth-state"
