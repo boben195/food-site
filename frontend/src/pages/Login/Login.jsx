@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 
 const Login = () => {
-  const [currentState, serCurrentState] = useState("Login");
+  const [currentState, setCurrentState] = useState("Login");
   return (
     <div>
       <form className="auth-form" action="">
@@ -35,14 +35,14 @@ const Login = () => {
           {currentState === "Login" ? (
             <p
               className="toggle-auth-state"
-              onClick={() => serCurrentState("Sign Up")}
+              onClick={() => setCurrentState("Sign Up")}
             >
               Create Account
             </p>
           ) : (
             <p
               className="toggle-auth-state"
-              onClick={() => serCurrentState("Login")}
+              onClick={() => setCurrentState("Login")}
             >
               Login Here
             </p>
